@@ -9,9 +9,7 @@ import java.lang.annotation.Target;
  * @author wuxw
  * @since 2019/8/14
  */
-@Target(ElementType.TYPE)
+@Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface QueryMain {
-
-    String alise();
+public @interface QuerySql {
 }

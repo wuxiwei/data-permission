@@ -6,7 +6,7 @@ import com.wuxiwei.datapermission.common.annotation.QueryMain;
  * @author wuxw
  * @since 2019/8/14
  */
-@QueryMain(as = "a")
+@QueryMain(alise = "a")
 public class QueryRequest {
 
     private String name;
@@ -26,5 +26,5 @@ public class QueryRequest {
 }
 
 
-// select * from jobs a join user b on a.user_id on b.user_id where b.dept_id in (deptIds) and a.user_id in (userIds) and a.project_id in (projectIds)
+// select * from jobs a join user b on a.user_id on b.id where b.dept_id in (deptIds) and a.user_id in (userIds) and a.project_id in (projectIds)
 

@@ -1,5 +1,7 @@
 package com.wuxiwei.datapermission.common.annotation;
 
+import com.wuxiwei.datapermission.common.enums.PermissionType;
+
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -23,31 +25,25 @@ public @interface Query {
      * 过滤字段
      * @return
      */
-    String whereFiled() default "";
-
-    /**
-     * 连表字段
-     * @return
-     */
-    String onFiled() default "";
-
-    /**
-     * 连表字段
-     * @return
-     */
-    String onTargetFiled() default "id";
+    String whereFiled();
 
     /**
      * 连接表
      * @return
      */
-    String joinTable() default "";
+    boolean join() default false;
+
+    /**
+     * 连表字段
+     * @return
+     */
+    PermissionType joinTable() default PermissionType.USER;
 
     /**
      * 默认内连接
      * @return
      */
-    Join join() default Join.INNER;
+    Join joinType() default Join.INNER;
 
 
     enum Operation {
