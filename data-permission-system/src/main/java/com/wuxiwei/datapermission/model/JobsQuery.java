@@ -36,7 +36,7 @@ public class JobsQuery {
     @DataPermission(type = PermissionType.PROJECT)
     @Query(whereFiled = "project_id",
             operation = Query.Operation.IN)
-    public List<String> projectIds;
+    public List<Integer> projectIds;
 
     @QuerySql
     public String querySql;
@@ -73,11 +73,11 @@ public class JobsQuery {
         this.deptIds = deptIds;
     }
 
-    public List<String> getProjectIds() {
+    public List<Integer> getProjectIds() {
         return projectIds;
     }
 
-    public void setProjectIds(List<String> projectIds) {
+    public void setProjectIds(List<Integer> projectIds) {
         this.projectIds = projectIds;
     }
 

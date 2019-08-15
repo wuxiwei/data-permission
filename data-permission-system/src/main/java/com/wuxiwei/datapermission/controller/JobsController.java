@@ -32,8 +32,6 @@ public class JobsController {
             e.printStackTrace();
         }
 
-        int i = 0;
-        System.out.println(i);
         return jobsQuery;
     }
 
@@ -43,7 +41,7 @@ public class JobsController {
         jobsQuery.setName("财务");
         jobsQuery.setUserIds(Arrays.asList("1","2","3"));
         jobsQuery.setDeptIds(Arrays.asList("111","211","311"));
-        jobsQuery.setProjectIds(Arrays.asList("11","21","31"));
+        jobsQuery.setProjectIds(Arrays.asList(11,21,31));
         QueryHelp.generateSql(jobsQuery);
         System.out.println(jobsQuery.toString());
     }

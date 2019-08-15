@@ -2,8 +2,6 @@ package com.wuxiwei.datapermission.aspect;
 
 import com.wuxiwei.datapermission.common.annotation.DataAuth;
 import com.wuxiwei.datapermission.common.annotation.DataPermission;
-import com.wuxiwei.datapermission.common.enums.PermissionType;
-import com.wuxiwei.datapermission.controller.JobsController;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -36,6 +34,7 @@ public class DataAspect {
                 DataPermission annotation = field.getAnnotation(DataPermission.class);
                 if (annotation != null && dataAuth.type().getTypes().contains(annotation.type())) {
                     // 当前业务支持数据维度
+                    // 根据业务支持获取相应的可见范围
                     switch (annotation.type()) {
                         case USER:
                             List<String> tempUser = Arrays.asList("1","2","3","4");
