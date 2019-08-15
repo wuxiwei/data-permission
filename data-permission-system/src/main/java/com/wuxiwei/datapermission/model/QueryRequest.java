@@ -1,27 +1,24 @@
 package com.wuxiwei.datapermission.model;
 
-import com.wuxiwei.datapermission.common.annotation.DataPermission;
-import com.wuxiwei.datapermission.common.annotation.MainPermission;
-
-import java.util.List;
+import com.wuxiwei.datapermission.common.annotation.QueryMain;
 
 /**
  * @author wuxw
  * @since 2019/8/14
  */
-@MainPermission(as = "a")
+@QueryMain(as = "a")
 public class QueryRequest {
 
     private String name;
 
-//    @DataPermission(whereFiled = "user_id", type = DataPermission.Type.IN)
+//    @DataPermission(whereFiled = "user_id", operation = DataPermission.Operation.IN)
 //    private List<String> userIds;
 //
 //    @DataPermission(joinTable = "user", onFiled = "user_id", onTargetFiled = "user_id",
-//            whereFiled = "dept_id", type = DataPermission.Type.IN)
+//            whereFiled = "dept_id", operation = DataPermission.Operation.IN)
 //    private List<String> deptIds;
 //
-//    @DataPermission(whereFiled = "project_id", type = DataPermission.Type.IN)
+//    @DataPermission(whereFiled = "project_id", operation = DataPermission.Operation.IN)
 //    private List<String> projectIds;
 
     private String sqlPermission;
