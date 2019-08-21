@@ -45,7 +45,7 @@ public class DataAspect {
                                 field.set(o, tempDept);
                             break;
                         case PROJECT:
-                            List<String> tempProject = Arrays.asList("11","21","31","41");
+                            List<Integer> tempProject = Arrays.asList(11,21,31,41);
                                 field.set(o, tempProject);
                             break;
                     }

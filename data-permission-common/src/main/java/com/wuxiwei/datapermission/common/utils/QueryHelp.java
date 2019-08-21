@@ -21,7 +21,7 @@ public class QueryHelp {
     private static final String ON = " on ";
     private static final String IN = " in ";
     private static final String JOIN = " join ";
-    private static final String AND = " and ";
+    private static final String OR = " or ";
     private static final String WHERE = " where ";
 
     public static <Q> void generateSql(Q query) throws IllegalAccessException {
@@ -73,7 +73,7 @@ public class QueryHelp {
             sql += StringUtils.join(joinSql, " ");
         }
         if (whereSql.size() > 0) {
-            sql += WHERE + StringUtils.join(whereSql, AND);
+            sql += WHERE + StringUtils.join(whereSql, OR);
         }
         if (sqlFile != null) {
             sqlFile.set(query, sql);
