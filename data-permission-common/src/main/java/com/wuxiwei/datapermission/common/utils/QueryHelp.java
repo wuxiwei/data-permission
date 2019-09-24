@@ -1,10 +1,10 @@
 package com.wuxiwei.datapermission.common.utils;
 
-import com.sun.deploy.util.StringUtils;
 import com.wuxiwei.datapermission.common.annotation.Query;
 import com.wuxiwei.datapermission.common.annotation.QueryMain;
 import com.wuxiwei.datapermission.common.annotation.QuerySql;
 import com.wuxiwei.datapermission.common.enums.PermissionType;
+import org.apache.commons.lang3.StringUtils;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
